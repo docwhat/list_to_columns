@@ -15,7 +15,7 @@ Have a list of strings but want to display it in a compact column format?
 
 It turns boring lists like:
 
-    Dedanim signally eyebright unpebbled ureterolithic boyishly auriculares cynebot evaluation literatus
+    Dedanim signally eyebright unpebbled ureterolithic boyishly
 
 or:
 
@@ -99,6 +99,8 @@ words = %w(
 
 puts ListToColumns.new(words, width: 60, space: 3)
 ```
+
+Output:
 
     antipyic           jagrata            sobby
     baccheion          knuclesome         tailpipe
