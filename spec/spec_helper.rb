@@ -7,6 +7,10 @@ SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
 ]
 SimpleCov.start { add_filter '/spec/' }
 
+$LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
+require 'list_to_columns'
+require 'rspec/given'
+
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
