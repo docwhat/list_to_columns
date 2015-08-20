@@ -8,16 +8,9 @@ task default: :test
 RSpec::Core::RakeTask.new(:spec)
 RuboCop::RakeTask.new(:style)
 
-RSpec::Core::RakeTask.new('ci:spec') do |task|
-  task.rspec_opts = %w(
-    --color
-    --order rand
-    --tty
-    --format doc
-  )
-end
+# building should depend on the tests passing.
+task build: [:test]
 
-task ci: [:style, 'ci:spec']
-
+# Test task
 desc 'Runs all the tests'
 task test: [:spec, :style]
