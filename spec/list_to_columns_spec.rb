@@ -1,6 +1,4 @@
-require 'spec_helper'
-
-describe ListToColumns do
+RSpec.describe ListToColumns do
   it 'has a version number' do
     expect(ListToColumns::VERSION).not_to be nil
   end
