@@ -18,6 +18,8 @@ RSpec.describe ListToColumns::ColumnMajor do
     # Default values
     Then { l2c.width == 78 }
     Then { l2c.space == 2 }
+    Then { l2c.matrix == [] }
+    Then { l2c.to_s == '' }
   end
 
   context '2x2 example' do

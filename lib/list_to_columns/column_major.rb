@@ -30,6 +30,7 @@ module ListToColumns
     end
 
     def matrix
+      return [].freeze if @strings.empty?
       @matrix ||= @strings
         .each_slice(number_of_rows)
         .to_a
