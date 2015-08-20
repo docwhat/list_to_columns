@@ -1,14 +1,41 @@
-# ListToColumns
+[![Build
+Status](https://travis-ci.org/docwhat/list_to_columns.svg)](https://travis-ci.org/docwhat/list_to_columns)
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/list_to_columns`. To experiment with that code, run `bin/console` for an interactive prompt.
+ListToColumns
+=============
 
-TODO: Delete this and the text above, and describe your gem
+Have a list of strings but want to display it in a compact column format?
+`ListToColumns` is the tool for the job!
 
-## Installation
+It turns boring lists like:
+
+    Dedanim signally eyebright unpebbled ureterolithic boyishly auriculares cynebot evaluation literatus
+
+or:
+
+     * Haidan
+     * Soleidae
+     * paleoanthropological
+     * Peba
+     * biaxillary
+     * preultimate
+     * convivialist
+     * amphistome
+     * shoaly
+     * cornloft
+
+...into glorious multi-columnar lists:
+
+    conventual     uranospinite  scallom
+    enantiopathia  biserially    Bogomil
+    scyphozoan     Addisonian    mislayer
+
+Installation
+------------
 
 Add this line to your application's Gemfile:
 
-```ruby
+``` ruby
 gem 'list_to_columns'
 ```
 
@@ -20,22 +47,32 @@ Or install it yourself as:
 
     $ gem install list_to_columns
 
-## Usage
+Usage
+-----
 
 TODO: Write usage instructions here
 
-## Development
+Development
+-----------
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake rspec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+After checking out the repo, run `bin/setup` to install dependencies. Then, run
+`rake rspec` to run the tests. You can also run `bin/console` for an
+interactive prompt that will allow you to experiment.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+To install this gem onto your local machine, run `bundle exec rake install`. To
+release a new version, update the version number in `version.rb`, and then run
+`bundle exec rake release`, which will create a git tag for the version, push
+git commits and tags, and push the `.gem` file to
+[rubygems.org](https://rubygems.org).
 
-## Contributing
+Contributing
+------------
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/list_to_columns.
+Bug reports and pull requests are welcome on GitHub at
+https://github.com/docwhat/list\_to\_columns.
 
+License
+-------
 
-## License
-
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
+The gem is available as open source under the terms of the [MIT
+License](http://opensource.org/licenses/MIT).
