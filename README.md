@@ -4,6 +4,8 @@ Status](https://travis-ci.org/docwhat/list_to_columns.svg)](https://travis-ci.or
 Status](https://coveralls.io/repos/docwhat/list_to_columns/badge.svg?branch=master&service=github)](https://coveralls.io/github/docwhat/list_to_columns?branch=master)
 [![Dependency
 Status](https://gemnasium.com/docwhat/list_to_columns.svg)](https://gemnasium.com/docwhat/list_to_columns)
+[![Gem
+Version](https://badge.fury.io/rb/list_to_columns.svg)](http://badge.fury.io/rb/list_to_columns)
 
 ListToColumns
 =============
@@ -54,7 +56,59 @@ Or install it yourself as:
 Usage
 -----
 
-TODO: Write usage instructions here
+`ListToPass.new <list>, [options]`
+
+Options:
+
+-   `:width` -- The width of the text to display. Defaults to `78`.
+-   `:space` -- The space between columns. Defaults to `2`.
+
+### Example
+
+``` ruby
+require 'list_to_columns'
+
+words = %w(
+  antipyic
+  baccheion
+  conormal
+  diet
+  extracloacal
+  fadridden
+  germifuge
+  hovering
+  isomerical
+  jagrata
+  knuclesome
+  libidinal
+  myoclonic
+  nonunionism
+  overmarl
+  parochialization
+  quadriparous
+  radiotelegraph
+  sobby
+  tailpipe
+  undefectiveness
+  vintaging
+  wheaten
+  xanthydrol
+  yesso
+  zircofluoride
+)
+
+puts ListToColumns.new(words, width: 60, space: 3)
+```
+
+    antipyic           jagrata            sobby
+    baccheion          knuclesome         tailpipe
+    conormal           libidinal          undefectiveness
+    diet               myoclonic          vintaging
+    extracloacal       nonunionism        wheaten
+    fadridden          overmarl           xanthydrol
+    germifuge          parochialization   yesso
+    hovering           quadriparous       zircofluoride
+    isomerical         radiotelegraph
 
 Development
 -----------
