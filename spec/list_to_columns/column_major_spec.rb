@@ -3,8 +3,8 @@ RSpec.describe ListToColumns::ColumnMajor do
   Given(:options) { { width: width, space: space } }
 
   shared_examples 'a sane list2column' do
-    Invariant { l2c.width == width }
-    Invariant { l2c.space == space }
+    Then { l2c.width == width }
+    And { l2c.space == space }
   end
 
   context '0x0 example' do
