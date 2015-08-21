@@ -2,10 +2,11 @@ module ListToColumns
   # Columnar list that is column major order; that is the order is
   # top->bottom, then right->left.
   class ColumnMajor
-    attr_reader :width, :space
+    attr_reader :width, :space, :indent
 
     def initialize(list = nil, options = nil)
       options ||= {}
+      @indent   = options[:indent] || 0
       @width    = options[:width] || 78
       @space    = options[:space] || 2
       @strings  = Array(list).map(&:to_s)
@@ -42,7 +43,7 @@ module ListToColumns
 
     def to_s
       matrix
-        .map { |r| r.map { |s| pad s }.join(' ' * space) }
+        .map { |r| "#{' ' * indent}#{r.map { |s| pad s }.join(' ' * space)}" }
         .map(&:rstrip)
         .join("\n")
     end

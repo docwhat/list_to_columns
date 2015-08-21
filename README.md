@@ -60,6 +60,7 @@ Usage
 
 Options:
 
+-   `:indent` -- How much to indent the columns. Defaults to `0`.
 -   `:width` -- The width of the text to display. Defaults to `78`.
 -   `:space` -- The space between columns. Defaults to `2`.
 

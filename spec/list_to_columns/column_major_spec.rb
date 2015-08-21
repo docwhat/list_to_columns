@@ -1,9 +1,10 @@
 RSpec.describe ListToColumns::ColumnMajor do
   Given(:l2c) { described_class.new list, options }
-  Given(:options) { { width: width, space: space } }
+  Given(:options) { { width: width, space: space, indent: indent } }
 
   shared_examples 'a sane list2column' do
-    Then { l2c.width == width }
+    Then { l2c.indent == indent }
+    And { l2c.width == width }
     And { l2c.space == space }
   end
 
@@ -25,6 +26,7 @@ RSpec.describe ListToColumns::ColumnMajor do
   context '2x2 example' do
     it_behaves_like 'a sane list2column'
     Given(:list) { %w( a bb ccc dddd ) }
+    Given(:indent) { 0 }
     Given(:space) { 1 }
     Given(:width) { 9 }
     # Expected:
@@ -41,22 +43,24 @@ RSpec.describe ListToColumns::ColumnMajor do
   context 'with nil in the list' do
     it_behaves_like 'a sane list2column'
     Given(:list) { ['a', 'b', nil, 'd'] }
+    Given(:indent) { 2 }
     Given(:space) { 1 }
     Given(:width) { 3 }
     # Expected:
-    # 123
-    # a
-    # b d
+    # 12345
+    #   a
+    #   b d
 
     Then { l2c.number_of_columns == 2 }
     Then { l2c.number_of_rows == 2 }
     Then { l2c.matrix[0][1] == '' }
-    Then { l2c.to_s == "a\nb d" }
+    Then { l2c.to_s == "  a\n  b d" }
   end
 
   context '3x5 lopsided example' do
     it_behaves_like 'a sane list2column'
     Given(:list) { ('a'..'k') }
+    Given(:indent) { 0 }
     Given(:space) { 1 }
     Given(:width) { 9 }
     # Expected:
@@ -85,6 +89,7 @@ RSpec.describe ListToColumns::ColumnMajor do
   context '3x3 lopsided example' do
     it_behaves_like 'a sane list2column'
     Given(:list) { ('a'..'j') }
+    Given(:indent) { 0 }
     Given(:space) { 2 }
     Given(:width) { 7 }
     # Expected:
@@ -107,6 +112,7 @@ RSpec.describe ListToColumns::ColumnMajor do
   context '4x4 lopsided example' do
     it_behaves_like 'a sane list2column'
     Given(:list) { ('a'..'m') }
+    Given(:indent) { 0 }
     Given(:space) { 1 }
     Given(:width) { 7 }
     # Expected:
