@@ -56,7 +56,7 @@ Or install it yourself as:
 Usage
 -----
 
-`ListToPass.new <list>, [options]`
+`ListToColumns.new <list>, [options]`
 
 Options:
 
