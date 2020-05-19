@@ -2,8 +2,6 @@
 Status](https://travis-ci.org/docwhat/list_to_columns.svg)](https://travis-ci.org/docwhat/list_to_columns)
 [![Coverage
 Status](https://coveralls.io/repos/docwhat/list_to_columns/badge.svg?branch=master&service=github)](https://coveralls.io/github/docwhat/list_to_columns?branch=master)
-[![Dependency
-Status](https://gemnasium.com/docwhat/list_to_columns.svg)](https://gemnasium.com/docwhat/list_to_columns)
 [![Gem
 Version](https://badge.fury.io/rb/list_to_columns.svg)](http://badge.fury.io/rb/list_to_columns)
 
