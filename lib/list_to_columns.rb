@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'list_to_columns/version'
 require 'list_to_columns/column_major'
 

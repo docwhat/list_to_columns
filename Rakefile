@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'bundler/setup'
 require 'bundler/gem_tasks'
 require 'rspec/core/rake_task'
@@ -13,4 +15,4 @@ task build: [:test]
 
 # Test task
 desc 'Runs all the tests'
-task test: [:spec, :style]
+task test: %i[spec style]

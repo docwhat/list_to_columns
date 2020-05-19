@@ -1,0 +1,13 @@
+{
+	"name": "Ruby 2",
+	"dockerFile": "Dockerfile",
+	"settings": {
+		"terminal.integrated.shell.linux": "/bin/bash"
+	},
+	"extensions": [
+		"rebornix.Ruby",
+		"walkme.ruby-extension-pack"
+	],
+	"postCreateCommand": "rm -f Gemfile.lock ; bundle install",
+	"remoteUser": "vscode"
+}

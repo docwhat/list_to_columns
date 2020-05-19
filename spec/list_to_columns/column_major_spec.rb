@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe ListToColumns::ColumnMajor do
   Given(:l2c) { described_class.new list, options }
   Given(:options) { { width: width, space: space, indent: indent } }
@@ -10,7 +12,7 @@ RSpec.describe ListToColumns::ColumnMajor do
 
   context '0x0 example' do
     Given(:options) { {} }
-    Given(:list)    { [] }
+    Given(:list) { [] }
 
     Then { l2c.number_of_columns == 0 }
     Then { l2c.number_of_rows == 0 }
@@ -25,7 +27,7 @@ RSpec.describe ListToColumns::ColumnMajor do
 
   context '2x2 example' do
     it_behaves_like 'a sane list2column'
-    Given(:list) { %w( a bb ccc dddd ) }
+    Given(:list) { %w[a bb ccc dddd] }
     Given(:indent) { 0 }
     Given(:space) { 1 }
     Given(:width) { 9 }
@@ -81,9 +83,9 @@ RSpec.describe ListToColumns::ColumnMajor do
     Then { l2c.longest_string_length == 1 }
     Then { l2c.number_of_columns == 5 }
     Then { l2c.number_of_rows == 3 }
-    Then { l2c.matrix[0] == %w(a d g j) }
-    Then { l2c.matrix[1] == %w(b e h k) }
-    Then { l2c.matrix[2] == %w(c f i) }
+    Then { l2c.matrix[0] == %w[a d g j] }
+    Then { l2c.matrix[1] == %w[b e h k] }
+    Then { l2c.matrix[2] == %w[c f i] }
   end
 
   context '3x3 lopsided example' do
@@ -102,10 +104,10 @@ RSpec.describe ListToColumns::ColumnMajor do
     Then { l2c.longest_string_length == 1 }
     Then { l2c.number_of_columns == 3 }
     Then { l2c.number_of_rows == 4 }
-    Then { l2c.matrix[0] == %w(a e i) }
-    Then { l2c.matrix[1] == %w(b f j) }
-    Then { l2c.matrix[2] == %w(c g) }
-    Then { l2c.matrix[3] == %w(d h) }
+    Then { l2c.matrix[0] == %w[a e i] }
+    Then { l2c.matrix[1] == %w[b f j] }
+    Then { l2c.matrix[2] == %w[c g] }
+    Then { l2c.matrix[3] == %w[d h] }
     Then { l2c.to_s == "a  e  i\nb  f  j\nc  g\nd  h" }
   end
 
@@ -125,10 +127,10 @@ RSpec.describe ListToColumns::ColumnMajor do
     Then { l2c.longest_string_length == 1 }
     Then { l2c.number_of_columns == 4 }
     Then { l2c.number_of_rows == 4 }
-    Then { l2c.matrix[0] == %w(a e i m) }
-    Then { l2c.matrix[1] == %w(b f j) }
-    Then { l2c.matrix[2] == %w(c g k) }
-    Then { l2c.matrix[3] == %w(d h l) }
+    Then { l2c.matrix[0] == %w[a e i m] }
+    Then { l2c.matrix[1] == %w[b f j] }
+    Then { l2c.matrix[2] == %w[c g k] }
+    Then { l2c.matrix[3] == %w[d h l] }
     Then { l2c.to_s == "a e i m\nb f j\nc g k\nd h l" }
   end
 end

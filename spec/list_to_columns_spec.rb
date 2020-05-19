@@ -1,8 +1,6 @@
-RSpec.describe ListToColumns do
-  it 'has a version number' do
-    expect(ListToColumns::VERSION).not_to be nil
-  end
+# frozen_string_literal: true
 
+RSpec.describe ListToColumns do
   describe '.new' do
     it 'returns a ColumnMajor object' do
       expect(ListToColumns.new).to be_a_kind_of(ListToColumns::ColumnMajor)
