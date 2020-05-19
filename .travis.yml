@@ -9,5 +9,7 @@ cache: bundler
 before_install: gem install bundler -v 2.1.2
 notifications:
   slack:
+    on_success: change
+    if: branch = master
     secure: XkqzaxNt2a6+jJIOP94WQppwLCRrfqDXGxBqwO9oKYAuGzWO0dHNuu8/+yEh1+S94/A1Mvk7mdC+AnpuwSmcHl3bZvwmgbVD+pBt8qMmFsmdzkm7htgjLjmbs9A0lyNsyjyN81Nm2g523fkYQ2Ubxs/3W4oQOS6W433jaz8zFISavF32N/f8zsPJ3YmsYzdMOEXk8UZFmub7Hs5+rgC0I9s2Yyrp3Bp/xUMGCePD6uo5YRcuW2VsX8xW8PW1L6zwEcXuj1+ljHZElX39bTHbzah4F6mjhBC1QpUr8RYc5FC5nEh05g6/fnMpRV2d2Mv+5fvBEOEuC/NBKHdwIK4NCTwlASAKcqK3WQ0wlmH1fTzRb09un6aNePhxmjBc+sd+8B5N9B5xqB2QBvQ1SkfnkcHnYv82hl5kjHrB3WzN4KWgyYZbt9YTnYdcAnEfVB1BDfGir+bccPSZb/13T8UcfbPgpTErcOYDqXcoPczgz7QWhSCmxxO7t70xrg/5CNNsz9zgzuTKBfjA5QYAFKTBsYV4vA64ZkM/40Ss/0cBJyJRtAYBGY20BoOy+kVWY+Nzo8NyWZzMAei3hBl8VDnwYJDFufyTzldokxDTdPmFO4wZ0I8z0RdaSmzNRmjMIcbE+JdPo8Tl1FeraFaVTV15hvM0ujrnWnvp35P9Bf+Tt6A=
   email: false
