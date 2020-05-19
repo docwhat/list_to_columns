@@ -1,0 +1,4 @@
+{
+  "extends": ["config:base", ":automergeAll", ":automergeBranchPush"],
+  "timezone": "America/New_York"
+}
